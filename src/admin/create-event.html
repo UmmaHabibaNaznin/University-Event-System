@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Event</title>
+    <link rel="stylesheet" href="../student/style.css">
+    <style>
+        form{ width:400px; margin:30px auto; padding:25px; background:rgba(255,255,255,0.12); border-radius:15px; backdrop-filter:blur(15px); color:white; text-align:left; }
+        input, textarea{ width:100%; padding:10px; margin:8px 0; border-radius:6px; border:none; }
+        button{ padding:12px; width:100%; border-radius:8px; border:none; cursor:pointer; font-weight:bold; background:#ffffff; color:#333; }
+        button:hover{ background:#f1f1f1; }
+    </style>
+</head>
+<body>
+<form id="createEventForm">
+    <h2>Create Event</h2>
+    <input type="text" id="title" placeholder="Event Title" required>
+    <input type="date" id="date" required>
+    <input type="text" id="venue" placeholder="Venue" required>
+    <input type="number" id="capacity" placeholder="Capacity" required>
+    <button type="submit">Create Event</button>
+    <p id="msg"></p>
+</form>
+<script>
+document.getElementById("createEventForm").addEventListener("submit", function(e){
+    e.preventDefault();
+    document.getElementById("msg").style.color="lightgreen";
+    document.getElementById("msg").innerText="Event Created Successfully!";
+});
+</script>
+</body>
+</html>

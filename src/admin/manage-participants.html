@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Manage Participants</title>
+    <link rel="stylesheet" href="../student/style.css">
+    <style>
+        .container{ width:90%; max-width:900px; margin:auto; padding:20px; background:rgba(255,255,255,0.12); border-radius:15px; backdrop-filter:blur(15px); color:white; }
+        table{ width:100%; border-collapse:collapse; margin-top:15px; }
+        th, td{ padding:10px; border:1px solid white; text-align:center; }
+        button{ padding:5px 10px; border-radius:6px; border:none; cursor:pointer; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>Manage Participants</h2>
+    <table>
+        <tr>
+            <th>Student Name</th>
+            <th>Email</th>
+            <th>Event</th>
+            <th>Status</th>
+            <th>Action</th>
+        </tr>
+        <tr>
+            <td>John Doe</td>
+            <td>john@gmail.com</td>
+            <td>AI Workshop</td>
+            <td>Pending</td>
+            <td>
+                <button onclick="approve(this)">Approve</button>
+                <button onclick="reject(this)">Reject</button>
+            </td>
+        </tr>
+        <tr>
+            <td>Jane Smith</td>
+            <td>jane@gmail.com</td>
+            <td>Programming Contest</td>
+            <td>Pending</td>
+            <td>
+                <button onclick="approve(this)">Approve</button>
+                <button onclick="reject(this)">Reject</button>
+            </td>
+        </tr>
+    </table>
+</div>
+
+<script>
+function approve(btn){ btn.parentElement.previousElementSibling.innerText="Approved"; }
+function reject(btn){ btn.parentElement.previousElementSibling.innerText="Rejected"; }
+</script>
+
+</body>
+</html>

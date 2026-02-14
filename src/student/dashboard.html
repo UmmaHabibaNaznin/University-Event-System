@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .dashboard {
+            width: 80%;
+            max-width: 900px;
+            padding: 30px;
+            border-radius: 15px;
+            background: rgba(255,255,255,0.12);
+            backdrop-filter: blur(15px);
+            color: white;
+            text-align: center;
+        }
+
+        .event-card {
+            background: rgba(255,255,255,0.2);
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 10px;
+        }
+
+        .logout {
+            margin-top: 20px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<div class="dashboard">
+    <h2>Student Dashboard</h2>
+    <p>Welcome! Here are upcoming events:</p>
+
+    <div class="event-card">
+        <h3>Programming Contest</h3>
+        <p>Date: 20 Feb 2026</p>
+        <p>Venue: Auditorium</p>
+    </div>
+
+    <div class="event-card">
+        <h3>AI Workshop</h3>
+        <p>Date: 25 Feb 2026</p>
+        <p>Venue: Lab 3</p>
+    </div>
+
+    <button class="logout" onclick="logout()">Logout</button>
+</div>
+
+<script>
+function logout(){
+    alert("Logged out successfully!");
+    window.location.href = "login.html";
+}
+</script>
+
+</body>
+</html>
